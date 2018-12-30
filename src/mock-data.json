@@ -3,87 +3,93 @@
     {
       "id": "1",
       "title": "Название первого проекта",
-      "state": "open",
+      "state": true,
       "created_at": "04.01.2019"
     },
     {
       "id": "2",
       "title": "Название второго проекта",
-      "state": "open",
+      "state": true,
       "created_at": "03.01.2019"
     },
     {
       "id": "3",
       "title": "Название третьего проекта",
-      "state": "open",
+      "state": true,
       "created_at": "02.01.2019"
     },
     {
       "id": "4",
       "title": "Очень-очень длинное название четвертого проекта, которое переносится на две строки",
-      "state": "close",
+      "state": false,
       "created_at": "01.01.2019"
     }
   ],
   "vacancies": [
     {
       "id": "1",
-      "title": "Название первого проекта",
-      "state": "open",
+      "title": "Первая вакансия",
+      "state": true,
       "project_id": "1"
     },
     {
       "id": "2",
-      "title": "Название первого проекта",
-      "state": "open",
+      "title": "Вторая вакансия",
+      "state": true,
       "project_id": "1"
     },
     {
       "id": "3",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Третья вакансия",
+      "state": false,
       "project_id": "1"
     },
     {
       "id": "4",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Первая вакансия",
+      "state": false,
       "project_id": "2"
     },
     {
       "id": "5",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Вторая вакансия",
+      "state": false,
       "project_id": "2"
     },
     {
       "id": "6",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Третья вакансия",
+      "state": false,
       "project_id": "2"
     },
     {
       "id": "7",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Первая вакансия",
+      "state": false,
       "project_id": "3"
     },
     {
       "id": "8",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Первая вакансия",
+      "state": false,
       "project_id": "4"
     },
     {
       "id": "9",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Вторая вакансия",
+      "state": false,
       "project_id": "4"
     },
     {
       "id": "10",
-      "title": "Название первого проекта",
-      "state": "close",
+      "title": "Третья вакансия",
+      "state": false,
+      "project_id": "4"
+    },
+    {
+      "id": "11",
+      "title": "Четвертая вакансия",
+      "state": false,
       "project_id": "4"
     }
   ]
