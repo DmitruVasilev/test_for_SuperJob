@@ -11,8 +11,12 @@
     "lint": "eslint \"src/**/*.js\"",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier-eslint --write \"**/*.{js,json}\"",
-    "deploy": "npm run build && gh-pages -d build -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add",
-    "precommit": "lint-staged"
+    "deploy": "npm run build && gh-pages -d build -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "**/*.js": [
@@ -35,7 +39,7 @@
     "react-app-rewire-scss": "^1.0.2",
     "react-app-rewired": "^1.5.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "^1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -52,7 +56,6 @@
   },
   "browserslist": [
     ">0.2%",
-    "not dead",
     "not ie <= 11",
     "not op_mini all"
   ]
