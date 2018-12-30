@@ -1,0 +1,74 @@
+@import "./vars"
+
+*, *::before, *::after
+	box-sizing: border-box
+
+html, body
+	width: 100%
+	height: 100%
+
+body
+	margin: 0
+	font-family: $base-ff
+	font-size: 16px
+	line-height: 1
+	font-weight: normal
+	overflow: hidden
+	background: $background
+	padding: 0
+	display: flex
+	justify-content: center
+
+h1,h2,h3,h4,h5
+	margin: 0
+
+#root
+	width: 100%
+	max-width: 512px
+	height: 100%
+	padding: 24px
+	background: #f2f2f2
+
+.base-input-wrapper
+	position: relative
+	display: inline-block
+	height: 20px
+
+.base-input
+	display: flex
+	font-size: 8px
+	line-height: 12px
+	padding: 3.5px 4px
+	color: $text
+	border-radius: 1px
+	border: 0.5px solid $border
+	background-color: $white
+	outline: none
+	&::placeholder
+		color: $text-light
+	&:hover, &:focus
+		border-radius: 1.5px
+		border-color: $text-light
+	&:active
+		border-color: $text-light
+	&.base-input--error
+		border-color: $danger
+
+.app_caption
+	margin-bottom: 40px
+	font-size: 41px
+	line-height: 1
+	font-family: 'AkzidenzGroteskPro'
+	letter-spacing: -0.05px
+	color: #1a1818
+
+.input-error
+	position: absolute
+	bottom: -10px
+	left: 0
+	font-size: 6px
+	line-height: 8px
+	color: $danger
+
+.hidden
+	display: none
