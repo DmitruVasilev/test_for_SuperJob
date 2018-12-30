@@ -1,3 +1,4 @@
+@import "../../style/vars"
 
 .button
 	font-size: 7px
@@ -7,16 +8,16 @@
 	margin-left: auto
 	color: #ffffff
 	border-radius: 1px
-	background-color: #00aa87
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.12)
+	background-color: $primary
+	box-shadow: 0 1px 1px 0 $text-light, 0 0 1px 0 $text-light
 	border: none
 	outline: none
 	cursor: pointer
 	letter-spacing: 0.3px
 	transition: 0.2s
 	&:hover, &:focus
-		background-color: #00816c
+		background-color: $primary--hover
 	&:active
-		background-color: #00826c
+		background-color: $primary--active
 
 

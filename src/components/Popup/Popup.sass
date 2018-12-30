@@ -25,11 +25,11 @@
 	padding: 12px
 	background: $white
 	border-radius: 1.5px
-	box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.24), 0 0 12px 0 $border
+	box-shadow: 0 12px 12px 0 $box-shadow, 0 0 12px 0 $text-light
 	z-index: 2
 
 .popup__header
-	border-bottom: 0.5px solid $text-light
+	border-bottom: 0.5px solid $text
 	padding-bottom: 7.5px
 	margin-bottom: 12px
 	display: flex
@@ -38,14 +38,14 @@
 .popup__title
 	font-size: 9.5px
 	line-height: 14px
-	color: $text
+	color: $text-dark
 
 .popup__close
 	display: inline-block
 	width: 7px
 	height: 7px
-	background-size: cover
 	background: url("./close-icon.svg") no-repeat
+	background-size: cover
 	margin-left: auto
 	cursor: pointer
 

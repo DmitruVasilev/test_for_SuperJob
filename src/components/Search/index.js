@@ -40,7 +40,7 @@ class Search extends React.Component {
           value={this.state.searchValue}
           onChange={this.handleSearchChange}
         />
-        {!!error && <span className="input-error">{error}</span>}
+        {!!error && <span className="input--error">{error}</span>}
       </label>
     );
   }

@@ -61,7 +61,7 @@ class Popup extends React.Component {
                 value={projectName}
                 onChange={this.handleProjectNameChange}
               />
-              {!!error && <span className="input-error">{error}</span>}
+              {!!error && <span className="input--error">{error}</span>}
             </label>
             <Button type="submit">Создать</Button>
           </form>
