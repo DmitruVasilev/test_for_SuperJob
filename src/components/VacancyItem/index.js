@@ -1,46 +1,40 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import "./VacancyItem.sass";
 
 const VacancyItem = ({ vacancyData }) => (
   <li
-    className={classNames(["vacancy", vacancyData.state && "vacancy--opened"])}
+    className={classNames(["vacancy", !vacancyData.state && "vacancy--closed"])}
   >
     <span className="vacancy__info">
       <h4 className="vacancy__title">{vacancyData.title}</h4>
       {vacancyData.state ? (
-        <span className="text text--icon-search">
-          Вакансия открыта, идет подбор кандидатов
+        <span className="sub-title">
+          <span className="material-icons md-10">search</span>Вакансия открыта,
+          идет подбор кандидатов
         </span>
       ) : (
-        <span className="text text--icon-ok">
-          Вакансия закрыта, сотрудник нанят
+        <span className="sub-title">
+          <span className="material-icons md-10">done</span>Вакансия закрыта,
+          сотрудник нанят
         </span>
       )}
     </span>
-    <span className="project__actions">
+    <span className="vacancy__actions">
       {vacancyData.state ? (
-        <button
-          type="button"
-          onClick={e => e.stopPropagation()}
-          className="button-transparent button-primary"
-        >
+        <button type="button" className="button-transparent">
           Закрыть вакансию
         </button>
       ) : (
         <button
           type="button"
-          onClick={e => e.stopPropagation()}
-          className="button-transparent"
+          className="button-transparent button-transparent--primary"
         >
           Открыть вакансию
         </button>
       )}
-      <button
-        type="button"
-        onClick={e => e.stopPropagation()}
-        className="button-transparent"
-      >
+      <button type="button" className="button-transparent">
         удалить
       </button>
     </span>

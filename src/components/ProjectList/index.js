@@ -18,7 +18,7 @@ class ProjectList extends React.Component {
     const { toggleOpenItem, openItemId } = this.props;
 
     return (
-      <section className="projects-wrapper">
+      <section>
         <ul className="projects">
           {projects.map(project => (
             <ProjectItem

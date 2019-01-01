@@ -41,13 +41,36 @@
 	color: $text-dark
 
 .popup__close
+	position: relative
 	display: inline-block
 	width: 7px
 	height: 7px
-	background: url("./close-icon.svg") no-repeat
 	background-size: cover
 	margin-left: auto
 	cursor: pointer
+	&:before, &:after
+		content: ''
+		position: absolute
+		left: 3px
+		top: 0
+		height: 8px
+		width: 1px
+		background-color: $text
+
+	&:before
+		transform: rotate(45deg)
+
+	&:after
+		transform: rotate(-45deg)
+
+	&:hover:after
+		background-color: $text-hover
+	&:active:after
+		background-color: $text-dark
+	&:hover:before
+		background-color: $text-hover
+	&:active:before
+		background-color: $text-dark
 
 .popup__form
 	display: flex
