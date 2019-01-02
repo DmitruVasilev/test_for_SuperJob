@@ -15,7 +15,7 @@ const Aside = ({ isOpen, toggleOpen }) => (
       Только открытые
     </label>
     <Button onButtonClick={toggleOpen}>Добавить проект</Button>
-    {isOpen && <Popup toggleOpen={toggleOpen} />}
+    {isOpen && <Popup toggleOpen={toggleOpen} title="Название проекта" />}
   </aside>
 );
 

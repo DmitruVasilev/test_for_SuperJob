@@ -7,7 +7,8 @@ import "./Popup.sass";
 
 class Popup extends React.Component {
   static propTypes = {
-    toggleOpen: PropTypes.func.isRequired
+    toggleOpen: PropTypes.func.isRequired,
+    title: PropTypes.string.isRequired
   };
 
   state = {
@@ -37,14 +38,14 @@ class Popup extends React.Component {
   };
 
   render() {
-    const { toggleOpen } = this.props;
+    const { toggleOpen, title } = this.props;
     const { error, projectName } = this.state;
     return (
       <section className="popup-wrapper">
         {/* eslint-disable */}
         <div className="popup">
           <div className="popup__header">
-            <h3 className="popup__title">Название проекта</h3>
+            <h3 className="popup__title">{title}</h3>
             <span className="popup__close" title="close" onClick={toggleOpen} />
           </div>
           <form className="popup__form" onSubmit={this.submitProjectName}>
@@ -57,7 +58,7 @@ class Popup extends React.Component {
                   !!error && "base-input--error"
                 ])}
                 type="text"
-                placeholder="Название проекта"
+                placeholder={title}
                 value={projectName}
                 onChange={this.handleProjectNameChange}
               />

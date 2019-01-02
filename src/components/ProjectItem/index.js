@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import VacancyItem from "../VacancyItem";
+import Popup from "../Popup";
+import ToggleOpen from "../../decorators/ToggleOpen";
 import "./ProjectItem.sass";
 
 {
@@ -10,7 +12,9 @@ import "./ProjectItem.sass";
 const ProjectItem = ({
   projectData,
   vacancies,
+  toggleOpen,
   openItemId,
+  isOpen,
   toggleOpenItem
 }) => (
   <li
@@ -29,6 +33,7 @@ const ProjectItem = ({
           <button
             type="button"
             className="button-transparent button-transparent--primary"
+            onClick={toggleOpen}
           >
             Добавить вакансию
           </button>
@@ -65,6 +70,7 @@ const ProjectItem = ({
           <VacancyItem vacancyData={vacancy} />
         </ul>
       ))}
+    {isOpen && <Popup toggleOpen={toggleOpen} title="Название вакансии" />}
   </li>
 );
 
@@ -76,6 +82,8 @@ ProjectItem.propTypes = {
   }).isRequired,
   openItemId: PropTypes.string.isRequired,
   toggleOpenItem: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  toggleOpen: PropTypes.func.isRequired,
   vacancies: PropTypes.arrayOf(
     PropTypes.shape({
       state: PropTypes.bool.isRequired,
@@ -86,4 +94,4 @@ ProjectItem.propTypes = {
   ).isRequired
 };
 
-export default ProjectItem;
+export default ToggleOpen(ProjectItem);
