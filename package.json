@@ -12,7 +12,7 @@
     "slint": "stylelint \"src/**/*.sass\" --syntax sass --color --formatter verbose",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier-eslint --write \"**/*.{js,json}\"",
-    "deploy": "npm run build && gh-pages -d build -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add"
+    "deploy": "npm run build && gh-pages -d build -m \"Updated\" --add"
   },
   "husky": {
     "hooks": {
