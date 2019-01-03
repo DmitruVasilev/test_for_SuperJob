@@ -32,7 +32,7 @@ class Popup extends React.Component {
       this.props.toggleOpen();
     } else {
       this.setState({
-        error: "Введите название проекта"
+        error: `Введите ${this.props.title.toLowerCase()}`
       });
     }
   };
